@@ -16,7 +16,11 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component'
         pathMatch: 'full',
         component: ContactsPageComponent,
       },
-
+      {
+        path: 'edit/:id',
+        loadChildren: () => import('./edit/edit.module')
+        .then(module => module.EditModule),
+      },
     ])
   ]
 })
