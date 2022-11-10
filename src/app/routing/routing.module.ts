@@ -16,6 +16,11 @@ import { RouterModule } from '@angular/router'
         .then(module => module.HomeModule),
       },
       {
+        path: 'user',
+        loadChildren: () => import('./pages/user/user.module')
+        .then(module => module.UserModule),
+      },
+      {
         path: '**',
         loadChildren: () => import('./pages/not-found/not-found.module')
         .then(module => module.NotFoundModule),
