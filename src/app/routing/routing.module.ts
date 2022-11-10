@@ -10,10 +10,17 @@ import { RouterModule } from '@angular/router'
     CommonModule,
     RouterModule.forChild([
       {
+        path: '',
+        pathMatch: 'full',
+        loadChildren: () => import('./pages/home/home.module')
+        .then(module => module.HomeModule),
+      },
+      {
         path: '**',
         loadChildren: () => import('./pages/not-found/not-found.module')
         .then(module => module.NotFoundModule),
-      }
+      },
+
     ])
   ]
 })
