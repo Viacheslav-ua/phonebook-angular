@@ -31,6 +31,11 @@ import { RouterModule } from '@angular/router'
         .then(module => module.LoginModule),
       },
       {
+        path: 'contacts',
+        loadChildren: () => import('./pages/contacts/contacts.module')
+        .then(module => module.ContactsModule),
+      },
+      {
         path: '**',
         loadChildren: () => import('./pages/not-found/not-found.module')
         .then(module => module.NotFoundModule),
