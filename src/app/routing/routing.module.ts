@@ -9,7 +9,11 @@ import { RouterModule } from '@angular/router'
   imports: [
     CommonModule,
     RouterModule.forChild([
-
+      {
+        path: '**',
+        loadChildren: () => import('./pages/not-found/not-found.module')
+        .then(module => module.NotFoundModule),
+      }
     ])
   ]
 })
