@@ -13,6 +13,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     RouterModule.forChild([
       {
         path: '',
+        pathMatch: 'full',
         component: RegistrationPageComponent,
       }
     ]),

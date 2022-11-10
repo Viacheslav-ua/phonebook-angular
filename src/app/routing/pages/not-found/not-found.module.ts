@@ -13,7 +13,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule.forChild([
       {
-        path: '**',
+        path: '',
+        pathMatch: 'full',
         component: NotFoundPageComponent,
       }
     ])

@@ -26,6 +26,11 @@ import { RouterModule } from '@angular/router'
         .then(module => module.RegistrationModule),
       },
       {
+        path: 'login',
+        loadChildren: () => import('./pages/login/login.module')
+        .then(module => module.LoginModule),
+      },
+      {
         path: '**',
         loadChildren: () => import('./pages/not-found/not-found.module')
         .then(module => module.NotFoundModule),

@@ -13,6 +13,7 @@ import { UserPageComponent } from './user-page/user-page.component'
     RouterModule.forChild([
       {
         path: '',
+        pathMatch: 'full',
         component: UserPageComponent,
       }
     ])
