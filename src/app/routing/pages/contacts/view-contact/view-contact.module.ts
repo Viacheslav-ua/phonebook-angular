@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { EditPageComponent } from './edit-page/edit-page.component'
 import { RouterModule } from '@angular/router'
 
-
+import { ViewContactPageComponent } from './view-contact-page/view-contact-page.component'
 
 @NgModule({
   declarations: [
-    EditPageComponent
+    ViewContactPageComponent
   ],
   imports: [
     CommonModule,
@@ -15,9 +14,9 @@ import { RouterModule } from '@angular/router'
       {
         path: '',
         pathMatch: 'full',
-        component: EditPageComponent,
-      }
+        component: ViewContactPageComponent,
+      },
     ])
   ]
 })
-export class EditModule { }
+export class ViewContactModule { }

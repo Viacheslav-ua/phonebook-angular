@@ -18,8 +18,13 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component'
       },
       {
         path: 'edit/:id',
-        loadChildren: () => import('./edit/edit.module')
-        .then(module => module.EditModule),
+        loadChildren: () => import('./edit-contact/edit-contact.module')
+        .then(module => module.EditContactModule),
+      },
+      {
+        path: 'view/:id',
+        loadChildren: () => import('./view-contact/view-contact.module')
+        .then(module => module.ViewContactModule),
       },
     ])
   ]
